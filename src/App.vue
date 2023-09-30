@@ -4,7 +4,8 @@ import HelloWorld from './components/HelloWorld.vue';
 
 <template>
   <div id="app">
-    <header>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <!-- <header>
       <img
         alt="Vue logo"
         class="logo"
@@ -23,7 +24,7 @@ import HelloWorld from './components/HelloWorld.vue';
       </div>
     </header>
 
-    <router-view />
+    <router-view /> -->
   </div>
 </template>
 
