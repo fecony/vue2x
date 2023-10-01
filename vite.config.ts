@@ -1,11 +1,16 @@
+/// <reference types="vitest" />
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import legacy from '@vitejs/plugin-legacy';
 import vue2 from '@vitejs/plugin-vue2';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    globals: false,
+    environment: 'happy-dom',
+  },
   plugins: [
     vue2(),
     legacy({

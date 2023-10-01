@@ -1,14 +1,16 @@
 /*eslint-env node*/
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-    'node_modules/preline/dist/*.js',
-  ],
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...fontFamily.sans],
+      },
+    },
   },
-  plugins: [require('preline/plugin')],
+  plugins: [require('@tailwindcss/forms')],
 };
