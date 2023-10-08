@@ -16,6 +16,12 @@ module.exports = {
     },
   ],
   rules: {
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['None', 'Default', 'Button', 'Tabs', 'Whiteboard', 'Logo', 'feather'],
+      },
+    ],
     'prettier/prettier': [
       'error',
       {
