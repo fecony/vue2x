@@ -23,6 +23,37 @@ describe('<TaskForm />', () => {
       });
   });
 
+  it.only('renders form with task provided', () => {
+    const task = {
+      id: '1',
+      name: 'Test task 1',
+      completed: true,
+      dueDate: '2023-10-06T17:39',
+    };
+    cy.mount(TaskForm, {
+      propsData: {
+        task,
+      },
+    });
+
+    cy.dataCy('task-form').should('be.visible');
+    cy.dataCy('task-checkbox')
+      .should('be.visible')
+      .within(() => {
+        cy.get('#task-completed').should('be.checked');
+      });
+    cy.dataCy('task-name')
+      .should('be.visible')
+      .within(() => {
+        cy.get('input').should('have.value', task.name);
+      });
+    cy.dataCy('task-due-date')
+      .should('be.visible')
+      .within(() => {
+        cy.get('input').should('have.value', task.dueDate);
+      });
+  });
+
   it('cannot submit form when required fields are not filled', () => {
     const onSubmitSpy = cy.spy().as('onSubmitSpy');
     cy.mount(TaskForm, {
