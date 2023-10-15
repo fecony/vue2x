@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ValidationObserver, ValidationProvider } from 'vee-validate';
-import { currentDateTime } from '@/utils/date';
 import { reactive } from 'vue';
 import type { Task } from '@/types';
 
@@ -95,7 +94,6 @@ const onSubmit = () => {
               <input
                 type="datetime-local"
                 v-model="taskForm.dueDate"
-                :min="currentDateTime()"
                 class="block w-full px-4 py-3 text-sm border-gray-200 shadow-sm rounded-r-md focus:z-10 focus:border-blue-500 focus:ring-blue-500"
               />
             </div>

@@ -1,16 +1,7 @@
 // @vitest-environment node
 import moment from 'moment';
 import { describe, expect, test } from 'vitest';
-import { currentDateTime, formatDate, getDueDateDayDifference } from '../date';
-
-test('currentDateTime returns current date with time set to 00:00', () => {
-  const currentDate = moment().local();
-  const formatedDate = currentDateTime();
-  const date = currentDate.toString().split('T')[0];
-
-  expect(formatedDate).toContain('T00:00');
-  expect(formatedDate).toContain(date);
-});
+import { formatDate, getDueDateDayDifference } from '../date';
 
 describe('formatDate', () => {
   describe('it displays past dates correctly', () => {
