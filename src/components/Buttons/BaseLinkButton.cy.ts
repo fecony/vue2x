@@ -32,9 +32,9 @@ describe('<BaseLinkButton />', () => {
       },
     });
 
-    cy.contains('go somewhere')
+    cy.dataCy('base-link-button')
       .should('be.visible')
-      .should(($a) => {
+      .then(($a) => {
         const message = $a.text();
         expect($a, message).to.have.attr('href').to.contain('somewhere');
       });

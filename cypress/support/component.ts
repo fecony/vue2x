@@ -31,7 +31,7 @@ import { required, alpha_dash, alpha_spaces } from 'vee-validate/dist/rules';
 import router from '../../src/router';
 import Logo from '../../src/components/Logo.vue';
 
-import { RootState } from '../../src/store/store';
+import type { RootState } from '../../src/store/store';
 import { useStore } from '../../src/store';
 
 // Augment the Cypress namespace to include type definitions for

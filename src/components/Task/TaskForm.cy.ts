@@ -23,7 +23,7 @@ describe('<TaskForm />', () => {
       });
   });
 
-  it.only('renders form with task provided', () => {
+  it('renders form with task provided', () => {
     const task = {
       id: '1',
       name: 'Test task 1',
