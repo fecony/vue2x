@@ -4,9 +4,7 @@ Vue.js todo app with vuex and cypress tests
 
 Deployed on: [chonky-cats.surge.sh/](https://chonky-cats.surge.sh/)
 
-<div align="center" >
-  <video src="https://github.com/fecony/vue2x/assets/36774784/dcba0f8c-d9d9-4a6b-91df-550651796306" />
-</div>
+https://github.com/fecony/vue2x/assets/36774784/dcba0f8c-d9d9-4a6b-91df-550651796306
 
 ## Project Setup
 
